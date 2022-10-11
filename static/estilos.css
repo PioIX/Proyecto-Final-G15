@@ -1,0 +1,106 @@
+nav {
+    background-color: #C6AC8F;
+    border-top: solid 1px #C6AC8F;
+    overflow: hidden;
+    font-family: 'Rubik', sans-serif;
+    float: center;
+}
+nav a {
+    float: left;
+    color: #22333B;
+    text-align: right;
+    font-size: 22px;
+    text-decoration: none;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a:hover {
+    background-color: #5E503F;
+    color: white;
+}
+
+.navbar-logo{
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  float: right
+}
+
+.navbar-logoT{
+  display: inline-block;
+  vertical-align: middle;
+  color: #22333B; 
+  font-size: 35px;
+  margin-right: 75px;
+  width: 80px;
+  float: right
+}
+
+.navbar-logo img{
+  display: block;
+  width: 90%;
+  height: auto;
+}
+
+nav p{
+  color:#22333B;
+  font-family: 'Rubik', sans-serif;
+  display: inline-block;
+  vertical-align: top;
+}
+
+h1{
+    font-size: 35px;
+    color:#22333B;
+    text-align: left;
+    margin-top: 3%;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: #EAE0D5;
+}
+
+.name {
+  font-family: 'Rubik', sans-serif;
+}
+
+details {
+  font-family: 'Rubik', sans-serif;
+  color:#22333B;
+}
+
+details summary{
+  font-family: 'Rubik', sans-serif;
+  color:#22333B;
+  font-size: 18px;
+}
+
+footer {
+  font-family: 'Rubik', sans-serif;
+  margin-top:0px;
+  width:100%;
+  weight:200px;
+  background-color: #C6AC8F;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p{
+  margin-left: 10px;
+  vertical-align: middle;
+  font-family: 'Rubik', sans-serif;
+  color:#22333B;
+}
+
+footer a{
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;  
+  padding-bottom: 0px;
+  float: right;
+}
