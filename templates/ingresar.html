@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title> INICIAR SESION </title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='estilos.css') }}">
+  <style>
+     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+  </style>
+    <nav class= ingresarNav>
+      <a href="{{ url_for('inicio') }}" id="museoNav"> INICIO </a>
+      <a href="{{ url_for('index') }}"> VOLVER </a>
+      <a class="navbar-logo" href="{{ url_for('index') }}">
+      <img src="static/img/Logo80.png">
+    </a>
+    <p class="navbar-logoT"> <b>ART</b>EMIS </p> </p> 
+    </nav>
+</head>
+  <body> 
+    <form action="{{url_for('ingresar')}}" method="POST">
+      <br>
+      <br>
+      <br>
+      <label for="name">Usuario: </label>
+      <input type="text" id="name" name="nombre" required /> <br>
+      <br>
+      <label for="password">Contraseña: </label> 
+      <input type="password" id="password" name="password" required /> <br>
+      <br>
+      <input type="button" onclick="signUp()" id="send-login" value="Ingresar"/>
+    </form>
+  </body>
+  
+  {% block footer %}
+
+<footer class="footer"> 
+    <p>
+      @ARTEMIS | Todos los derechos reservados
+    </p>
+    <div>
+       <a class="instagram">
+        <img src="static/img/1.png" align="left">
+      </a>
+      <a class="mail">
+        <img src="static/img/2.png">
+      </a>
+      <a class="twitter">
+        <img src="static/img/3.png">
+      </a> 
+    </div>
+    
+  </footer>
+
+{% endblock %}
+ <script src="../static/java/javascript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+      </script>  
+</html>
