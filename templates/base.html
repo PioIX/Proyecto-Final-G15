@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title> BASE </title>
+    <link rel="stylesheet" type="text/css" 
+href="{{url_for('static', filename='estilos.css') }}">
+</head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+  </style>
+<header>
+{% block nav %}
+  <nav class="nav">
+    <a href="{{ url_for('museos') }}"> MUSEOS</a>
+    <a href="{{ url_for('novedades') }}"> NOVEDADES</a>
+    <a href="{{ url_for('internacional') }}"> INTERNACIONAL</a>
+    <a href="{{ url_for('faq') }}"> FAQ</a>
+    <a href="{{ url_for('index') }}"> VOLVER </a>
+    <a class="navbar-logo" href="{{ url_for('index') }}">
+      <img src="static/img/Logo80.png">
+    </a>
+    <p class="navbar-logoT"> <b>ART</b>EMIS </p> 
+  </nav>
+{% endblock %}
+</header>
+<body>
+{% block titulo %}{% endblock %}
+  
+{% block contenido %}{% endblock %}
+</body>
+  
+{% block footer %}
+
+<footer class="footer"> 
+    <p>
+      @ARTEMIS | Todos los derechos reservados
+    </p>
+    <div>
+       <a class="instagram">
+        <img src="static/img/1.png" align="left">
+      </a>
+      <a class="mail">
+        <img src="static/img/2.png">
+      </a>
+      <a class="twitter">
+        <img src="static/img/3.png">
+      </a> 
+    </div>
+    
+  </footer>
+
+{% endblock %}
+</html>
 
