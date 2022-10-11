@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title> Administrador </title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='estilos.css') }}">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+  </style>
+     <nav>
+    <a onclick="museosi()"  id="administrador"> MUSEOS </a>
+    <a onclick="novedadesi()" id="administrador"> NOVEDADES </a>
+    <a onclick="internacionali()" id="administrador"> INTERNACIONAL</a>
+    <a onclick="preguntasi()" id="administrador"> FAQ </a>
+    <a href="{{ url_for('administrador') }}"" id="administrador"> VOLVER </a>
+    </nav>
+</head>
+<body>
+ <div id="ModificarTuPagina" >
+   <H1>
+    Modificá tu index
+  </H1>  
+  <form  action="{{url_for('ingresar')}}" methods="POST" > 
+    
+    <label for="fotos">Fotos:</label>
+    <input type="file" id="fotos" name="fotos" /><br>
+    <label for="informacion">Información:</label>
+    <input type="text" id="informacion" name="informacion" /><br>
+    
+    <input type="button"  onclick = "" id="send-index" value="Enviar"/>
+    </form>  
+ </div> 
+  
+<div id="ModificarMuseos" hidden>
+  <H1>
+    Modificá tu Museos
+  </H1>
+  <form action="{{url_for('ingresar')}}" methods="POST" >
+      
+    <br>
+        <label for="titulo">Titulo:</label>
+        <input type="text" id="titulo" name="titulo" /><br>
+                
+    <br>
+        <label for="informacion">Información:</label>
+        <input type="text" id="informacion" name="informacion" /><br>
+    
+    <br>
+        <label for="coleccion">Colección Actual:</label>
+        <input type="text" id="coleccion" name="coleccion" /><br>
+    <br>
+        <label for="horario">Horario:</label>
+        <input type="text" id="horario" name="hora" /><br>
+    <br>
+        
+        <label for="precios">Precios:</label>
+        <input type="text" id="precios" name="precio" /><br>
+    <br>    
+        <label for="Ubicacion">Ubicación:</label>
+        <input type="text" id="ubicacion" name="ubicacion" /></br>
+    
+    <br>
+        <label for="barrio">Barrio:</label>
+        <input type="text" id="barrio" name="barrio" /><br>
+    
+    <br>
+        <label for="linPagina">Link Pagina:</label>
+        <input type="url" id="linkPagina" name="linkPagina" /><br>
+    
+    <br>
+        <label for="logo">Logo:</label>
+        <input type="text" id="logo" name="logo" /><br>
+    
+        
+        <input type="submit" onclick="museos()" id="send-museos" value="Enviar"/>
+  </form>
+</div>
+  
+<div id="modificarNovedades" hidden>
+
+  <h1>
+    Modificá tus novedades
+  </h1>
+  <form action="{{url_for('ingresar')}}" methods="POST" >
+  
+  <label for="foto1">Primera Foto:</label>
+  <input type="file" id="foto1" name="foto1" />
+  <br>
+  
+  <label for="texto1">Primer Texto:</label>
+  <input type="text" id="texto1" name="texto1" />
+  <br>
+  
+  <label for="foto2">Segunda Foto:</label>
+  <input type="file" id="foto2" name="foto2" />
+  <br>
+  
+  <label for="texto2">Segundo Texto:</label>
+  <input type="text" id="texto2" name="texto2" />
+  <br>
+  
+  <label for="foto3">Tercera Foto:</label>
+  <input type="file" id="foto3" name="foto3" /><br>
+  <label for="texto3">Tercer Texto:</label>
+  <input type="text" id="texto3" name="texto3" />
+  <br>
+
+  <label for="foto4">Cuarta Foto:</label>
+  <input type="file" id="foto4" name="foto4" />
+  <br>
+
+  
+  <label for="texto4">Texto cuatro:</label>
+  <input type="text" id="texto4" name="texto4" />
+  <br>
+  
+  <label for="link4">Link hipervínculo:</label>
+  <input type="url" id="link" name="link" />
+  <br>
+    
+  <input type="button" onclick="" id="send-novedades" value="Enviar"/>
+  </form>
+</div>
+
+<div id="modificarInternacional" hidden>
+  <h1>
+    Modificá tu internacional
+  </h1>
+  <form action="{{url_for('ingresar')}}" methods="POST" >
+  
+  <label for="campo1">Nombre campo uno:</label>
+  <input type="text" id="campo1" name="campo1" /><br>
+  
+  <label for="textoCampo1">Texto campo uno:</label>
+  <input type="text" id="textocampo1" name="textocampo1" /><br>
+  
+  <label for="foto1">Foto uno:</label>
+  <input type="file" id="fotoCampo1" name="fotoCampo1" /><br>
+  
+  <label for="campo2">Nombre campo dos:</label>
+  <input type="text" id="campo2" name="campo2" /><br>
+  
+  <label for="textoCampo2">Texto campo dos:</label>
+  <input type="text" id="textocampo2" name="textocampo2" /><br>
+    
+  <label for="foto2">Foto dos:</label>
+  <input type="file" id="fotoCampo2" name="fotoCampo2" /><br>
+
+  <label for="campo3">Nombre campo tres:</label>
+  <input type="text" id="campo3" name="campo3" /><br>
+
+  
+  <label for="textoCampo3">Texto campo tres:</label>
+  <input type="text"  id="textocampo2" name="textocampodos" /><br>
+
+  <label for="foto3">Foto tres:</label>
+  <input type="file" id="fotoCampo3" name="fotoCampo3" /><br>
+
+    
+  <input type="submit" onclick="internacional()" id="send-internacional" value="Enviar"/>
+  </form>
+
+</div>
+<div id="modificarPreguntas" hidden>
+  <h1>
+    Modificá tu preguntas frecuentas
+  </h1>
+  <form action="{{url_for('ingresar')}}" methods="POST" >
+  
+  <label for="pregunta1">Pregunta uno:</label>
+  <input type="text" id="pregunta1" name="pregunta1" /><br>
+  
+  <label for="respuesta1">Respuesta uno:</label>
+  <input type="text" id="respuesta1" name="respuesta1" /><br>
+  
+  <label for="pregunta2">Pregunta dos:</label>
+  <input type="text" id="pregunta2" name="pregunta2" /><br>
+  
+  <label for="respuesta2">Respuesta dos:</label>
+  <input type="text" id="respuesta2" name="respuesta2" /><br>
+  
+  <label for="pregunta3">Pregunta tres:</label>
+  <input type="text" id="pregunta3" name="pregunta3" /><br>
+    
+  <label for="respuesta3">Respuesta tres:</label>
+  <input type="text" id="respuesta3" name="respuesta3" /><br>
+
+  <label for="pregunta4">Pregunta cuatro:</label>
+  <input type="text" id="pregunta4" name="pregunta4" /><br>
+
+  
+  <label for="respuesta4">Respuesta cuatro:</label>
+  <input type="text"  id="respuesta4" name="respuesta4" /><br>
+
+  <label for="pregunta5">Pregunta cinco:</label>
+  <input type="text" id="pregunta5" name="pregunta5" /><br>
+    
+  <label for="respuesta5">Respuesta cinco:</label>
+  <input type="text" id="respuesta5" name="respuesta5" /><br>
+
+
+    
+  <input type="button" onclick="preguntas()" id="send-faq" value="Enviar"/>
+  </form>
+</div>
+</body>
+ <script src="../static/java/javascript.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>  
