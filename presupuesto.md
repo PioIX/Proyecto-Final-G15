@@ -16,11 +16,11 @@ La finalidad de nuestro proyecto es generar una vista previa con la información
 
 **Logo:**  
 
-![Logo](/img/Logo80.png)  
+![Logo](Logo80.png)  
 
 **Hoja de estilo:**  
 
-![Stylesheet](/img/hojaDeEstilo.jpg)
+![Stylesheet](hojaDeEstilo.jpg)
 
 [Paleta:](https://coolors.co/palette/0a0908-22333b-eae0d5-c6ac8f-5e503f)  
 
