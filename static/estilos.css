@@ -1,3 +1,4 @@
+/* nav */ 
 nav {
     background-color: #C6AC8F;
     border-top: solid 1px #C6AC8F;
@@ -9,11 +10,12 @@ nav a {
     float: left;
     color: #22333B;
     text-align: right;
-    font-size: 22px;
+    font-size: 20px;
     text-decoration: none;
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
+    margin-top: 0px;
 }
 
 nav a:hover {
@@ -21,11 +23,83 @@ nav a:hover {
     color: white;
 }
 
+/* inicio de sesion */
+.ingresarCss{
+  color: #22333B;
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
+  margin-left: 20px;
+
+}
+h1 .iniciarsesion{
+  margin-left: 10px;
+}
+
+.btnIngresarCss {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #5E503F;
+  border: none;
+  color: #FFFF;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 0px;
+  font-family: 'Rubik', sans-serif;
+  
+}
+
+.btnIngresarCss:hover{
+  background-color: #C6AC8F;
+}
+
+.indexAdmin{
+  color: #22333B;
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
+  margin-left: 20px;
+  
+}
+
+/* botones /administrador */
+
+nav .btnAdmin{
+  margin-top: 30px;
+  width: 150px;
+}
+
+/* museos /administrador */
+.museos{
+  color: #22333B;
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
+  margin-left: 20px;
+  
+}
+.novedades {
+  
+}
+
+
+/* botones nav principal*/ 
+
+nav .btn{
+  margin-top: 30px;
+  width: 200px;
+}
+
 .navbar-logo{
   display: inline-block;
   vertical-align: middle;
   width: 100px;
-  float: right
+  float: right;
+}
+
+.navbar-logo:hover{
+  background-color: #C6AC8F;
 }
 
 .navbar-logoT{
@@ -35,7 +109,9 @@ nav a:hover {
   font-size: 35px;
   margin-right: 75px;
   width: 80px;
-  float: right
+  float: right;
+  font-family: 'Rubik', sans-serif;
+  
 }
 
 .navbar-logo img{
@@ -51,12 +127,19 @@ nav p{
   vertical-align: top;
 }
 
+ /* botones barra2*/ 
+
+ingresarNav .btn{
+  margin-top: 30px;
+}
+
 h1{
     font-size: 35px;
     color:#22333B;
     text-align: left;
     margin-top: 3%;
     font-family: 'Rubik', sans-serif;
+    margin-left: 20px;
 }
 
 body {
@@ -67,9 +150,12 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+/* FAQ */ 
+
 details {
   font-family: 'Rubik', sans-serif;
   color:#22333B;
+  margin-left: 20px;
 }
 
 details summary{
@@ -78,10 +164,30 @@ details summary{
   font-size: 18px;
 }
 
+/* bloques de index.html */
+
+.contenedorBloques{
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 87%;
+  height: 100%;
+}
+
+blockquote{
+  background-color: #C6AC8F;
+  font-family: 'Rubik', sans-serif;
+  width: 852px;
+  height: 550px;
+  margin-left: 20px;
+}
+
+/* footer base*/
+
 footer {
   font-family: 'Rubik', sans-serif;
   margin-top:0px;
-  width:100%;
+  width: 99%;
   weight:200px;
   background-color: #C6AC8F;
   position: absolute;
@@ -103,4 +209,8 @@ footer a{
   width: 50px;  
   padding-bottom: 0px;
   float: right;
+}
+
+footer img{
+  margin-top: 8px;
 }
