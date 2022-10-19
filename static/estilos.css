@@ -24,6 +24,7 @@ nav a:hover {
 }
 
 /* inicio de sesion */
+
 .ingresarCss{
   color: #22333B;
   font-size: 20px;
@@ -48,8 +49,7 @@ h1 .iniciarsesion{
   transition: all 0.5s;
   cursor: pointer;
   margin-left: 0px;
-  font-family: 'Rubik', sans-serif;
-  
+  font-family: 'Rubik', sans-serif; 
 }
 
 .btnIngresarCss:hover{
@@ -79,10 +79,10 @@ nav .btnAdmin{
   margin-left: 20px;
   
 }
+
 .novedades {
   
 }
-
 
 /* botones nav principal*/ 
 
@@ -127,7 +127,7 @@ nav p{
   vertical-align: top;
 }
 
- /* botones barra2*/ 
+/* botones barra2*/ 
 
 ingresarNav .btn{
   margin-top: 30px;
@@ -178,9 +178,137 @@ blockquote{
   background-color: #C6AC8F;
   font-family: 'Rubik', sans-serif;
   width: 852px;
-  height: 550px;
+  height: 530px;
   margin-left: 20px;
 }
+
+.contenedorBloques .bloque1{
+  width: 70%; 
+}
+
+/* botones Museos*/
+
+.btnMuseos{
+  background-color: #C6AC8F;
+  font-family: 'Rubik', sans-serif;
+  width: 20%;
+  height: 100px;
+  justify-content: space-between;
+  display: inline-block;
+  align-content: center;
+  margin-right: 3%;
+  margin-left: 1.8%;
+  margin-top: 4%;
+}
+
+.museosTexto{
+  margin-top: 7%;
+  font-size: 18px;
+  margin-left: 12%;
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.museos a{
+  margin-top: 8%;
+  text-decoration: bold;
+}
+
+.btnMuseos:hover{
+    background-color: #5E503F;
+    color: white;
+}
+
+/* selects */ 
+
+.opciones{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.opciones select::-ms-expand {
+    display: none;
+}
+
+.opciones{
+	max-width: 250px;
+	position: relative;
+}
+
+.opciones{
+	max-width: 250px;
+	position: relative;
+}
+ 
+.opciones select{
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  padding: 7px 10px;
+  height: 35px;
+  outline: 0; 
+  border: 0;
+	border-radius: 0;
+	background: #C6AC8F;
+	color: #f0f0f0;
+	font-size: 1em;
+	color: #f0f0f0;
+  font-family: 'Rubik', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+  border-radius: 12px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+ 
+.opciones select:hover{
+	background: #5E503F;
+}
+ 
+.opciones i{
+	position: absolute;
+	right: 20px;
+	top: calc(50% - 13px);
+	width: 16px;
+	height: 16px;
+	display: block;
+	border-left:4px solid #5E503F;
+	border-bottom:4px solid #5E503F;
+	transform: rotate(-45deg); /* Giramos el cuadrado */
+	transition: all 0.25s ease;
+}
+ 
+.opciones:hover i{
+	margin-top: 3px;
+}
+
+.novedades{
+  margin-top: 2%;
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  text-decoration: none;
+  
+}
+
+.internacional{
+  margin-top: 2%;
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  text-decoration: none;
+}
+
+.faqadmin{
+  margin-top: 2%;
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  text-decoration: none;
+}
+
 
 /* footer base*/
 
@@ -200,7 +328,7 @@ footer p{
   margin-left: 10px;
   vertical-align: middle;
   font-family: 'Rubik', sans-serif;
-  color:#22333B;
+  color: #22333B;
 }
 
 footer a{
