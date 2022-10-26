@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}
+  <title> Descripción </title>
+{% endblock %}
+
+{% block titulo %} {% endblock %}
+  
+{% block contenido %}
+
+<div class="bloqueTitulo">
+</div>
+
+<div class="divGrande">
+  <div class="bloqueDescripcion1"></div>
+  <div class="bloqueDescripcion2"></div>
+  <div class="bloqueFoto"></div>
+  <div class="horariosMuseos"></div>
+  <div class="botonMuseos">
+    <a class="btn" href="{{ url_for('museos') }}" > RESERVAS </a>
+  </div>
+
+</div>
+
+
+
+
+{% endblock %}
