@@ -6,25 +6,34 @@
 href="{{url_for('static', filename='estilos.css') }}">
 </head>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
   </style>
    <title> ARTEMIS </title>
 <header> 
+  
 {% block nav %}
   <nav class="barra2">
-    <a href="{{ url_for('ingresar') }}" id="museoNav"> INICIAR SESIÓN</a>
-    <a href="{{ url_for('inicio') }}"> INICIO</a>
+    <a class="btn" href="{{ url_for('cambioAIngresar') }}" id="museoNav"> INICIAR SESIÓN</a>
+    <a class="btn" href="{{ url_for('inicio') }}"> INICIO</a>
     <a class="navbar-logo" href="{{ url_for('index') }}">
       <img src="static/img/Logo80.png">
     </a>
     <p class="navbar-logoT"> <b>ART</b>EMIS </p> </p> 
   </nav>
 {% endblock %}
+  
 </header>
+  
 <body>
 {% block titulo %} {% endblock %}
   
-{% block contenido %}{% endblock %}
+{% block contenido %}
+<div class="divIndexGrande">
+  <div class="contenedorBloques1"></div>
+  <div class="contenedorBloques2"></div>
+</div>
+
+{% endblock %}
 
 {% block footer %}
 <footer class="footer"> 
