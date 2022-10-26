@@ -110,8 +110,7 @@ nav .btn{
   margin-right: 75px;
   width: 80px;
   float: right;
-  font-family: 'Rubik', sans-serif;
-  
+  font-family: 'Rubik', sans-serif; 
 }
 
 .navbar-logo img{
@@ -166,25 +165,27 @@ details summary{
 
 /* bloques de index.html */
 
-.contenedorBloques{
-  margin-left: 20px;
-  display: flex;
-  justify-content: space-around;
-  width: 87%;
-  height: 100%;
-}
-
-blockquote{
-  background-color: #C6AC8F;
+.contenedorBloques1{
   font-family: 'Rubik', sans-serif;
-  width: 852px;
-  height: 530px;
-  margin-left: 20px;
+  width: 48%;
+  height: 550px;
+  background-color: #C6AC8F;
+  margin-left: 0%;
+  margin-top: 2%;
+  display: inline-block;
+  justify-content: space-between;
+}
+.contenedorBloques2{
+  font-family: 'Rubik', sans-serif;
+  width: 48%;
+  height: 550px;
+  background-color: #C6AC8F;
+  margin-left: 3.5%;
+  margin-top: 2%;
+  display: inline-block;
+  justify-content: space-between;
 }
 
-.contenedorBloques .bloque1{
-  width: 70%; 
-}
 
 /* botones Museos*/
 
@@ -223,23 +224,36 @@ blockquote{
 
 /* selects */ 
 
+label{
+  font-size: 14px;
+  margin-left: 2%;
+  margin-top: 2%;
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  
+}
+
 .opciones{
 	appearance: none;
-	-webkit-appearance: none;
 	-moz-appearance: none;
 }
 
-.opciones select::-ms-expand {
-    display: none;
+.opciones select::-ms-expand{
+  display: none;
 }
 
 .opciones{
-	max-width: 250px;
+	max-width: 10%;
 	position: relative;
+  justify-content: space-evenly;
+  display: inline-block;
+  align-content: center;
+  margin-right: 3%;
+  margin-left: 4%;
 }
 
 .opciones{
-	max-width: 250px;
+	max-width: 10%;
 	position: relative;
 }
  
@@ -247,15 +261,15 @@ blockquote{
 	display: inline-block;
 	width: 100%;
 	cursor: pointer;
-  padding: 7px 10px;
-  height: 35px;
+  padding: 3px 7px;
+  height: 5%;
   outline: 0; 
   border: 0;
 	border-radius: 0;
-	background: #C6AC8F;
-	color: #f0f0f0;
+	background: #EAE0D5;
+	color: #EAE0D5;
 	font-size: 1em;
-	color: #f0f0f0;
+	color: #22333B;
   font-family: 'Rubik', sans-serif;
 	border:2px solid rgba(0,0,0,0.2);
   border-radius: 12px;
@@ -265,32 +279,31 @@ blockquote{
  
 .opciones select:hover{
 	background: #5E503F;
-}
- 
-.opciones i{
-	position: absolute;
-	right: 20px;
-	top: calc(50% - 13px);
-	width: 16px;
-	height: 16px;
-	display: block;
-	border-left:4px solid #5E503F;
-	border-bottom:4px solid #5E503F;
-	transform: rotate(-45deg); /* Giramos el cuadrado */
-	transition: all 0.25s ease;
-}
- 
-.opciones:hover i{
-	margin-top: 3px;
+  color: #EAE0D5;
 }
 
-.novedades{
+/* Novedades HTML */
+.novedades{ 
   margin-top: 2%;
   font-size: 18px;
   font-family: 'Rubik', sans-serif;
   color: #22333B;
   text-decoration: none;
-  
+}
+
+.css{
+  padding: 3px 3px;
+  font-size: 35px;
+  font-weight: bold;
+  color:#22333B;
+  margin-top: 2.5%;
+  font-family: 'Rubik', sans-serif;
+  margin-left: 5px;
+  background-color: #C6AC8F; 
+}
+
+.css h1{
+  text-align: center;
 }
 
 .internacional{
@@ -309,6 +322,79 @@ blockquote{
   text-decoration: none;
 }
 
+/* bloques museos2 */
+
+.bloqueTitulo{
+  font-family: 'Rubik', sans-serif;
+  width: 46%;
+  height: 60px;
+  background-color: #C6AC8F;
+  margin-left: 0%;
+  margin-top: 2%;
+}
+
+.bloqueDescripcion1{
+  font-family: 'Rubik', sans-serif;
+  width: 46%;
+  height: 140px;
+  background-color: #C6AC8F;
+  margin-left: 0%;
+  margin-top: 2%;
+  display: inline-block;
+  justify-content: space-between;
+}
+
+.bloqueDescripcion2{
+  font-family: 'Rubik', sans-serif;
+  width: 50%;
+  height: 140px;
+  background-color: #C6AC8F;
+  margin-left: 3%;
+  margin-top: 2%;
+  display: inline-block;
+  justify-content: space-between;
+}
+
+.bloqueFoto{
+  font-family: 'Rubik', sans-serif;
+  width: 46%;
+  height: 285px;
+  background-color: #C6AC8F;
+  margin-left: 0%;
+  margin-top: 2%;
+  display: inline-block;
+  justify-content: space-between;
+}
+
+.horariosMuseos{
+  font-family: 'Rubik', sans-serif;
+  width: 50%;
+  height: 200px;
+  background-color: #C6AC8F;
+  margin-left: 3%;
+  margin-top: 2%;
+  display: inline-block;
+  justify-content: space-between;
+  margin-bottom: 5.3%;
+}
+
+.botonMuseos{
+  font-family: 'Rubik', sans-serif;
+  width: 50%;
+  height: 60px;
+  background-color: #C6AC8F;
+  margin-left: 49%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  display: inline-block;
+  justify-content: space-between;
+}
+
+.botonMuseos a{
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  font-size: 20px;
+}
 
 /* footer base*/
 
