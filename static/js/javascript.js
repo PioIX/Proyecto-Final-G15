@@ -31,8 +31,8 @@ function signUp() {
 }
 function index() {
   informacion = document.getElementById("informacion").value
-  fotos = document.getElementById("fotos").value
-
+  fotos = document.getElementById("fotos").files[0]
+  console.log(fotos)
   $.ajax({ 
     url:"/agregarIndex", 
     type:"POST", 
@@ -52,20 +52,17 @@ function index() {
 }
 
 function borrarIndex(){
-  informacionBorrar = document.getElementById("informacion").value
-  fotosBorrar = document.getElementById("fotos").value
+  SelectEliminarIndexImagen = document.getElementById('SelectEliminarIndexImagen').value
 
   $.ajax({
     url:"/borrarIndex",
     type:"DELETE",
-    data: {"value": informacion,
-           "value2": fotos,
+    data: {"value": SelectEliminarIndexImagen,
           },
 
     success: function(response){
       datos = response
-      
-      alert("Se ha eliminado correctamente")
+      alert("La imagen se ha eliminado correctamente")
       
     },
     error: function(error){
@@ -78,20 +75,20 @@ function museos() {
   titulo= document.getElementById("titulo").value 
   informacion= document.getElementById("informacion").value
   coleccion= document.getElementById("coleccion").value 
-  hora= document.getElementById("horario").value 
+  horario= document.getElementById("horario").value 
   precio= document.getElementById("precios").value
   ubicacion= document.getElementById("ubicacion").value 
   barrio= document.getElementById("barrio").value
   linkPagina= document.getElementById("linkPagina").value 
-  logo= document.getElementById("logo").value
- 
+  logo= document.getElementById("logo").files[0]
+  console.log(logo)
   $.ajax({ 
     url:"/agregarMuseo", 
     type:"POST", 
     data: {"value": titulo,
           "value2": informacion,
           "value3": coleccion,
-          "value4": hora,
+          "value4": horario,
           "value5": precio,
           "value6": ubicacion,
           "value7": barrio,
@@ -110,16 +107,34 @@ function museos() {
   }, });
 
 }
+function borrarMuseos(){
+  SelectEliminarM = document.getElementById('SelectEliminarM').value
+
+  $.ajax({
+    url:"/borrarMuseos",
+    type:"DELETE",
+    data: {"value": SelectEliminarM,
+          }, 
+
+    success: function(response){
+      datos = response
+      alert("La definición se ha eliminado correctamente")
+      
+    },
+    error: function(error){
+      console.log(error);
+  }, });
+}
 function internacional() {
   campo1 = document.getElementById("campo1").value 
   textoCampo1 = document.getElementById("textocampo1").value
-  fotoCampo1 = document.getElementById("fotoCampo1").value 
+  fotoCampo1 = document.getElementById("fotoCampo1").files[0] 
   campo2 = document.getElementById("campo2").value
   textoCampo2 = document.getElementById("textocampo2").value 
-  fotoCampo2 = document.getElementById("fotoCampo2").value
+  fotoCampo2 = document.getElementById("fotoCampo2").files[0]
   campo3 = document.getElementById("campo3").value 
   textoCampo3 = document.getElementById("textocampo3").value
-  fotoCampo3 = document.getElementById("fotoCampo3").value 
+  fotoCampo3 = document.getElementById("fotoCampo3").files[0] 
   
   $.ajax({ 
     url:"/agregarInternacional", 
@@ -147,30 +162,14 @@ function internacional() {
 
 }
 function preguntas() {
-  pregunta1 = document.getElementById("pregunta1").value 
-  respuesta1 = document.getElementById("respuesta1").value
-  pregunta2 = document.getElementById("pregunta2").value 
-  respuesta2 = document.getElementById("respuesta2").value
-  pregunta3 = document.getElementById("pregunta3").value 
-  respuesta3 = document.getElementById("respuesta3").value
-  pregunta4 = document.getElementById("pregunta4").value 
-  respuesta4 = document.getElementById("respuesta4").value
-  pregunta5 = document.getElementById("pregunta5").value 
-  respuesta5 = document.getElementById("respuesta5").value
- 
+  pregunta = document.getElementById("pregunta").value 
+  respuesta = document.getElementById("respuesta").value
+  
   $.ajax({ 
     url:"/agregarPreguntas", 
     type:"POST", 
-    data: {"value": pregunta1,
-          "value2": respuesta2,
-          "value3": pregunta2,
-          "value4": respuesta2,
-          "value5": pregunta3,
-          "value6": respuesta3,
-          "value7": pregunta4,
-          "value8": respuesta4,
-          "value9": pregunta5,
-          "value10": respuesta5,
+    data: {"value": pregunta,
+          "value2": respuesta,
           }, 
 
     success: function(response){  //En response voy a tener el JSON
@@ -192,8 +191,6 @@ function borrarPreguntas(){
     url:"/borrarPreguntas",
     type:"DELETE",
     data: {"value": SelectEliminar,
-          
-          
           }, 
 
     success: function(response){
