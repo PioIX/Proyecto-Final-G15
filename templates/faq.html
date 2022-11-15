@@ -1,47 +1,22 @@
 {% extends 'base.html' %}
 {% block title %}
-<head>
-<title> FAQ </title>
-  <link rel="stylesheet" href="{{url_for('static',filename='faq.css') }}">
-</head>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
-  </style>
-
+  <title> FAQ </title>
 {% endblock %}
 
 {% block titulo %} 
-  <h1 omsubmit=rellenarInfo() > Preguntas frecuentes </h1>
+  <h1 > PREGUNTAS FRECUENTES </h1>
 {% endblock %}
 
-{% block contenido %} 
-<br>
-<details>
-  <summary id="summary1"></summary>
-  <p id="Info1">  </p>
-</details>
-<br>
-<br>
-<details>
-  <summary id="summary2"> </summary>
-  <p id=Info2> </p>
-</details>
-<br>
-<br>
-<details>
-  <summary id="summary3"></summary>
-  <p id="Info3"></p>
-</details>
-<br>
-<br>
-<details>
-  <summary id="summary4"></summary>
-  <p id="Info4"> </p>
-</details>
-<br>
-<details>
-  <summary id="summary5"></summary>
-  <p id="Info5"></p>
-</details>
-<br>
+{% block contenido %}
+
+{%for a in range(lenght)%}
+    <br>
+    <details>
+      <summary class="summary">{{respuestaDeLaBaseDeDatos[a][1]}}</summary>
+      <p class="Info">{{respuestaDeLaBaseDeDatos[a][2]}}</p>
+    </details>
+    <br>
+    <br>
+{%endfor%}
+
 {% endblock %}
