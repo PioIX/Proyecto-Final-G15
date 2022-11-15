@@ -29,11 +29,22 @@ nav a:hover {
   color: #22333B;
   font-size: 20px;
   font-family: 'Rubik', sans-serif;
-  margin-left: 20px;
-
+  margin-left: 1.5%;
 }
-h1 .iniciarsesion{
+.ingresarCss label{
+  color: #22333B;
+  font-size: 15px;
+  position: relative;
+  bottom: 7px;
+}
+
+h2 .iniciarsesion{
   margin-left: 10px;
+}
+
+input:focus {
+  background: rgb(234, 224, 213);
+  /* background: rgb(198, 172, 143);  */
 }
 
 .btnIngresarCss {
@@ -48,7 +59,7 @@ h1 .iniciarsesion{
   width: 100px;
   transition: all 0.5s;
   cursor: pointer;
-  margin-left: 0px;
+  margin-left: 0%;
   font-family: 'Rubik', sans-serif; 
 }
 
@@ -81,14 +92,13 @@ nav .btnAdmin{
 }
 
 .novedades {
-  
 }
 
 /* botones nav principal*/ 
 
 nav .btn{
   margin-top: 30px;
-  width: 200px;
+  width: 14%;
 }
 
 .navbar-logo{
@@ -105,12 +115,12 @@ nav .btn{
 .navbar-logoT{
   display: inline-block;
   vertical-align: middle;
-  color: #22333B; 
-  font-size: 35px;
-  margin-right: 75px;
+  color: #22333B;
+  font-size: 34px;
+  margin-right: 4.2%;
   width: 80px;
   float: right;
-  font-family: 'Rubik', sans-serif; 
+  font-family: 'Rubik', sans-serif;
 }
 
 .navbar-logo img{
@@ -136,9 +146,9 @@ h1{
     font-size: 35px;
     color:#22333B;
     text-align: left;
-    margin-top: 3%;
+    margin-top: 1.5%;
     font-family: 'Rubik', sans-serif;
-    margin-left: 20px;
+    margin-left: 1%;
 }
 
 body {
@@ -163,7 +173,33 @@ details summary{
   font-size: 18px;
 }
 
+.faqadmin{
+  margin-top: 2%;
+  font-size: 18px;
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  text-decoration: none;
+}
+
 /* bloques de index.html */
+
+.imagenIndex{
+  width: 95%;
+  height: 505px;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  margin-right: 3.3%;
+  margin-bottom: 3%;
+}
+/* imagen del logo del museo */
+.imagenMuseos{
+  width: 18%;
+  height: 39%;
+  margin-left: 3%;
+  margin-right: auto;
+  margin-top: -24%;
+  display: block;
+}
 
 .contenedorBloques1{
   font-family: 'Rubik', sans-serif;
@@ -171,45 +207,210 @@ details summary{
   height: 550px;
   background-color: #C6AC8F;
   margin-left: 0%;
-  margin-top: 2%;
-  display: inline-block;
-  justify-content: space-between;
-}
-.contenedorBloques2{
-  font-family: 'Rubik', sans-serif;
-  width: 48%;
-  height: 550px;
-  background-color: #C6AC8F;
-  margin-left: 3.5%;
-  margin-top: 2%;
-  display: inline-block;
+  margin-top: 1%;
+  float: left;
   justify-content: space-between;
 }
 
-
-/* botones Museos*/
-
-.btnMuseos{
-  background-color: #C6AC8F;
-  font-family: 'Rubik', sans-serif;
-  width: 20%;
-  height: 100px;
-  justify-content: space-between;
-  display: inline-block;
-  align-content: center;
+.contenedorBloques1 p{
+  font-size: 25px;
+  margin-left: 3%;
   margin-right: 3%;
-  margin-left: 1.8%;
-  margin-top: 4%;
-}
-
-.museosTexto{
-  margin-top: 7%;
-  font-size: 18px;
-  margin-left: 12%;
+  margin-top: 26%;
+  line-height: 1.5em;
   font-family: 'Rubik', sans-serif;
   color: #22333B;
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
+}
+
+.contenedorBloques2{
+  font-family: 'Rubik', sans-serif;
+  width: 48%;
+  height: 550px;
+  background-color: #5E503F;
+  float: left;
+  margin-left: 3.9%;
+  margin-top: 1%;
+  position: relative;
+}
+/* botones galeriaFotos*/
+.carousel-item{
+  height: 550px;
+  margin-right:0px;
+}
+.carousel-control-next{
+  margin-top:270px;
+}
+.carousel-indicators {
+  margin-top:545px;
+}
+
+/* bloques de INICIO  */
+.cssInicio1{
+  height: 20px;
+  width: 20%;
+  margin-top: 2%;
+  margin-left: 2%;
+  display: inline-block;
+}
+
+.cssInicio1 img{
+  height: 260px;
+  width: 160%;
+}
+
+.cssInicio2{
+  background-color: #C6AC8F;
+  height: 200px;
+  width: 32%;
+  margin-top: 1%;
+  margin-left: 2%;
+}
+
+.cssInicio2 p{
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  font-size: 17px;
+  font-weight: bold;
+  position: relative;
+  margin-left: 2.5%;
+  top: 4%;
+}
+
+.hiper{
+  background-color: #C6AC8F;
+  height: 474px;
+  width: 10%;
+  margin-top: -30.5%;
+  margin-left: 38%;
+  justify-content: space-between;
+  display: inline-block;
+  float: left;
+  color: #22333B;
+}
+
+.hiper a{
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  font-size: 42px;
+  float: left;
+  transform: rotate(90deg);
+  transform-origin: left top 0;
+  text-align: center;
+  position: relative;
+  font-weight: bold;
+  top: 33%;
+  left: 66%;
+  text-transform: uppercase;
+}
+
+.inicioImg1{
+  background-color: #5E503F;
+  height: 215px;
+  width: 20%;
+  margin-top: -30%;
+  margin-left: 52%;
+  display: inline-block;
+  position: relative;
+  top: -40px;
+}
+
+.inicioImg1 img{
+  height: 200px;
+  width: 96%;
+  position: relative;
+  top: -110%;
+  left: 2%;
+  z-index: 1;
+}
+
+.inicioImg2{
+  background-color: #5E503F;
+  height: 215px;
+  width: 20%;
+  margin-top: -14%;
+  margin-left: 75%;
+  display: inline-block;
+  position: relative;
+  top: -69px;
+}
+
+.inicioImg2 img{
+  height: 200px;
+  width: 96%;
+  position: relative;
+  top: -109%;
+  left: 2%;
+  z-index: 1;
+}
+
+.inicioImg3{
+  background-color: #5E503F;
+  height: 215px;
+  width: 20%;
+  margin-left: 52%;
+  display: inline-block;
+  position: relative;
+  top: -527px;
+}
+
+.inicioImg3 img{
+  height: 200px;
+  width: 96%;
+  position: relative;
+  top: 117%;
+  left: 2%;
+}
+
+.inicioImg4{
+  background-color: #5E503F;
+  height: 215px;
+  width: 20%;
+  margin-top: -14%;
+  margin-left: 75%;
+  display: inline-block; 
+  position: relative;
+  top: -555px;
+}
+
+.inicioImg4 img{
+  height: 200px;
+  width: 96%;
+  position: relative;
+  top: 116%;
+  left: 2%;
+}
+
+/* botones Museos*/
+
+.btnMuseos{
+  display: inline-block;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: 0%;
+  background-color: #C6AC8F;
+  height: 14vh;
+  width: 15%;
+  margin-top: 2%;
+}
+
+.museos123{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+
+.museosTexto p{
+  margin-top: 7%;
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  font-weight: bold;
+  margin-left: 33%;
+  display: flex;
 }
 
 .museos a{
@@ -218,28 +419,23 @@ details summary{
 }
 
 .btnMuseos:hover{
-    background-color: #5E503F;
-    color: white;
+  background-color: #5E503F;
+  color: white;
 }
 
-/* selects */ 
+/* selects museos */ 
 
 label{
   font-size: 14px;
-  margin-left: 2%;
+  margin-left: 0%;
   margin-top: 2%;
   font-family: 'Rubik', sans-serif;
   font-weight: bold;
-  
 }
 
 .opciones{
 	appearance: none;
 	-moz-appearance: none;
-}
-
-.opciones select::-ms-expand{
-  display: none;
 }
 
 .opciones{
@@ -248,8 +444,8 @@ label{
   justify-content: space-evenly;
   display: inline-block;
   align-content: center;
-  margin-right: 3%;
-  margin-left: 4%;
+  margin-right: 0%;
+  margin-left: 1%;
 }
 
 .opciones{
@@ -282,7 +478,7 @@ label{
   color: #EAE0D5;
 }
 
-/* Novedades HTML */
+/* Novedades CSS */
 .novedades{ 
   margin-top: 2%;
   font-size: 18px;
@@ -291,20 +487,135 @@ label{
   text-decoration: none;
 }
 
-.css{
-  padding: 3px 3px;
+.cssNovedad{
+  padding: 2px 2px 1px;
   font-size: 35px;
   font-weight: bold;
   color:#22333B;
-  margin-top: 2.5%;
+  margin-top: 2%;
   font-family: 'Rubik', sans-serif;
-  margin-left: 5px;
+  margin-left: 0px;
   background-color: #C6AC8F; 
 }
 
-.css h1{
+.cssNovedad h1{
   text-align: center;
 }
+
+.cssNovedad1{
+  background-color: #C6AC8F;
+  height: 250px;
+  width: 45%;
+  margin-top: 3%;
+  margin-left: 5%;
+  display: inline-block;
+  justify-content: space-between;
+}
+
+.cssNovedad2{
+  background-color: #C6AC8F;
+  height: 250px;
+  width: 16%;
+  margin-top: 3%;
+  margin-left: 4%;
+  padding-top: 1%;
+  display: inline-block
+}
+
+.cssNovedad3{
+  background-color: #C6AC8F;
+  height: 375px;
+  width: 20%;
+  margin-top: 3%;
+  margin-left: 3%;
+  float: left;
+  position: relative;
+}
+
+.cssNovedad4{
+  background-color: #C6AC8F;
+  height: 90px;
+  width: 45%;
+  margin-top: -2.5%;
+  margin-left: 5%;
+  float: left;
+  position: relative;
+}
+
+.cssNovedad5{
+  background-color: #C6AC8F;
+  height: 90px;
+  width: 16%;
+  margin-top: 2%;
+  margin-left: 4.5%;
+  float: left;
+  position: relative;
+}
+
+.cssNovedad5 a{
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  font-size: 22px;
+  margin-top: 2%;
+  text-align: center;
+}
+
+.cssNovedad1 p{
+  font-family: 'Rubik', sans-serif;  
+  text-align: center;
+  font-weight: bold;
+}
+.cssNovedad2 p{
+  font-family: 'Rubik', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+.cssNovedad3 p{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  margin-top: 7%;
+  font-weight: bold;
+}
+.cssNovedad4 p{
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  
+}
+.cssNovedad5 p{
+  font-family: 'Rubik', sans-serif; 
+}
+
+.imagenNovedades{
+  width: 100%;
+  height: 250px;
+}
+
+.imagenNovedades1{
+  width: 20%;
+}
+
+.imagenNovedades2{
+  width: 60%;
+  margin-top: 5%;
+  margin-left: 18.5%;
+}
+
+.imagenNovedades3{
+  width: 87%;
+  height: 201px;
+  margin-left: 6%;
+  margin-top: 11%;
+}
+
+.imagenNovedades4{
+  width: 100%;
+  height: 90px;
+}
+
+
+/* Internacional */
 
 .internacional{
   margin-top: 2%;
@@ -314,23 +625,86 @@ label{
   text-decoration: none;
 }
 
-.faqadmin{
-  margin-top: 2%;
-  font-size: 18px;
+.interBloques{
+  margin-top: -1%;
+}
+
+.inter1{
+    width: 29%;
+    height: 455px;
+    background-color: #C6AC8F;
+    margin-top: 1%;
+    float: left;
+    margin-left: 1.5%;;
+    margin-bottom: 2%;
+    justify-content: space-between;
+}
+
+.interBloques h2{
   font-family: 'Rubik', sans-serif;
   color: #22333B;
+  font-size: 21px;
   text-decoration: none;
+  margin-left: 3%;
+}
+
+.interBloques p{
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 3%;
+}
+
+.inter2{
+  width: 29%;
+  height: 455px;
+  background-color: #C6AC8F;
+  margin-top: 1%;
+  float: left;
+  margin-left: 4%;
+  margin-bottom: 2%;
+  justify-content: space-between;
+}
+
+.inter3{
+    width: 29%;
+    height: 455px;
+    background-color: #C6AC8F;
+    float: left;
+    margin-left: 4%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.imagenInternacional{
+  width: 92%;
+  height: 295px;
+  margin-left: 4%;
+  margin-top: 1%;
+  margin-right: 3.3%;
+  margin-bottom: 3%;
 }
 
 /* bloques museos2 */
 
 .bloqueTitulo{
-  font-family: 'Rubik', sans-serif;
   width: 46%;
   height: 60px;
   background-color: #C6AC8F;
   margin-left: 0%;
   margin-top: 2%;
+}
+
+.bloqueTitulo p{
+  color: #000;
+  font-family: 'Rubik', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 2%;
+  font-weight: bold;
 }
 
 .bloqueDescripcion1{
@@ -340,8 +714,15 @@ label{
   background-color: #C6AC8F;
   margin-left: 0%;
   margin-top: 2%;
-  display: inline-block;
+  float: left;
   justify-content: space-between;
+}
+
+.bloqueDescripcion1 p{
+  color: #000;
+  margin-left: 2%;
+  text-align: center;
+  margin-top: 4%;
 }
 
 .bloqueDescripcion2{
@@ -349,16 +730,25 @@ label{
   width: 50%;
   height: 140px;
   background-color: #C6AC8F;
-  margin-left: 3%;
+  margin-left: 2.4%;
   margin-top: 2%;
   display: inline-block;
   justify-content: space-between;
 }
 
-.bloqueFoto{
+.bloqueDescripcion2 p{
   font-family: 'Rubik', sans-serif;
+  margin-left: 2%;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.museos2Grande{
+}
+
+.bloqueFoto{
   width: 46%;
-  height: 285px;
+  height: 260px;
   background-color: #C6AC8F;
   margin-left: 0%;
   margin-top: 2%;
@@ -366,37 +756,59 @@ label{
   justify-content: space-between;
 }
 
+.fotoMuseos2{
+    margin-left: 14.5%;
+    margin-top: 2%;
+    width: 63%;
+    height: 230px;
+}
+
 .horariosMuseos{
   font-family: 'Rubik', sans-serif;
   width: 50%;
-  height: 200px;
+  height: 180px;
   background-color: #C6AC8F;
-  margin-left: 3%;
-  margin-top: 2%;
-  display: inline-block;
-  justify-content: space-between;
-  margin-bottom: 5.3%;
+  margin-left: 48.5%;
+  margin-top: -16.4%;
 }
 
-.botonMuseos{
+.horariosMuseos p{
+  font-family: 'Rubik', sans-serif;
+  width: 98%;
+  height: 130px;
+  margin-left: 2%;
+  margin-top: -15%;
+}
+
+.botonMuseos2{
   font-family: 'Rubik', sans-serif;
   width: 50%;
-  height: 60px;
+  height: 45px;
   background-color: #C6AC8F;
-  margin-left: 49%;
+  margin-left: 48.4%;
   margin-top: 2%;
-  margin-bottom: 3%;
+  margin-bottom: 0%;
   display: inline-block;
   justify-content: space-between;
 }
 
-.botonMuseos a{
+.botonMuseos2 a{
   font-family: 'Rubik', sans-serif;
   color: #22333B;
-  font-size: 20px;
+  font-size: 22px;
+  text-align: center;
+  padding-left: 23%;
+  font-weight: bold;
 }
 
-/* footer base*/
+.botonMuseos2 p{
+  font-family: 'Rubik', sans-serif;
+  color: #22333B;
+  font-size: 22px;
+  margin-top: 1%;
+  text-align: center;  
+}
+/* footer */
 
 footer {
   font-family: 'Rubik', sans-serif;
@@ -428,3 +840,6 @@ footer a{
 footer img{
   margin-top: 8px;
 }
+
+
+
