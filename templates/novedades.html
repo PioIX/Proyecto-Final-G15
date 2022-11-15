@@ -4,5 +4,45 @@
 {% endblock %}
 
 {% block titulo %} 
-<h1> Lo último en el mundo del arte </h1>
+<div class="cssNovedad">
+  <h1> LO      ÚLTIMO      EN      EL      MUNDO      DEL      ARTE </h1>
+  </div>
+{% endblock %}
+
+{% block contenido %} 
+<div>
+  
+  <!--<div class="cssNovedad">
+  <h1> LO      ÚLTIMO      EN      EL      MUNDO      DEL      ARTE </h1>
+  </div>-->
+  
+  <div class="cssNovedad1">
+    <img class= "imagenNovedades" src="/static/media/{{respuestaNovedades[-1][0]}}">
+    
+  </div>
+  
+  <div class="cssNovedad2">    
+    <img class= "imagenNovedades2" src="/static/media/{{respuestaNovedades[-1][2]}}">
+    <p>{{respuestaNovedades[-1][3]}}</p>
+  </div>
+  
+  <div class="cssNovedad3">
+    <img class= "imagenNovedades3" src="/static/media/{{respuestaNovedades[-1][4]}}">
+    <p>{{respuestaNovedades[-1][5]}}</p>
+  </div>
+  
+  <div class="cssNovedad4">
+    
+    
+    <p>{{respuestaNovedades[-1][1]}}</p>
+  </div>
+  <a class="btn" href="{{ url_for('museos') }}" > 
+    <div class="cssNovedad5">
+      <a href="{{respuestaNovedades[-1][7]}}"><img class="imagenNovedades4" src="/static/media/{{respuestaNovedades[-1][6]}}"></a>
+    </div>
+  </a>
+</div>
+
+
+
 {% endblock %}
