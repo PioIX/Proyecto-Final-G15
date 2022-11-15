@@ -4,5 +4,28 @@
 {% endblock %}
 
 {% block titulo %} 
-<h1> Escenciales del mundo </h1>
+<h1> <strong> ESCENCIALES DEL MUNDO </strong> </h1>
+{% endblock %}
+
+{% block contenido %} 
+
+
+  <div class="interBloques"> 
+ 
+  <div class="inter1"> 
+    <h2>{{respuestaInternacional[-1][0]}}</h2>
+    <p>{{respuestaInternacional[-1][1]}}</p>
+  <img class="imagenInternacional"src="/static/media/{{respuestaInternacional[-1][2]}}">
+  </div>
+
+  <div class="inter2">
+    <h2>{{respuestaInternacional[-1][3]}}</h2>
+    <p>{{respuestaInternacional[-1][4]}}</p>
+  <img class="imagenInternacional"src="/static/media/{{respuestaInternacional[-1][5]}}">
+  </div>
+  <div class="inter3">
+    <h2>{{respuestaInternacional[-1][6]}}</h2>
+    <p>{{respuestaInternacional[-1][7]}}</p>
+  <img class="imagenInternacional"src="/static/media/{{respuestaInternacional[-1][8]}}"></div>
+  </div>
 {% endblock %}
