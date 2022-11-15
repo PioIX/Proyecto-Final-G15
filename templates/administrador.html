@@ -3,39 +3,125 @@
 <head>
   <meta charset="utf-8" />
   <title> Administrador </title>
-  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='estilos.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
   </style>
-     <nav>
-    <a onclick="museosi()"  id="administrador"> MUSEOS </a>
-    <a onclick="novedadesi()" id="administrador"> NOVEDADES </a>
-    <a onclick="internacionali()" id="administrador"> INTERNACIONAL</a>
-    <a onclick="preguntasi()" id="administrador"> FAQ </a>
-    <a href="{{ url_for('administrador') }}"" id="administrador"> VOLVER </a>
-    </nav>
+     <nav class="nav">
+    <a class="btnAdmin" onclick="museosi()" id="administrador"> MUSEOS </a>
+    <a class="btnAdmin" onclick="novedadesi()" id="administrador"> NOVEDADES </a>
+    <a class="btnAdmin" onclick="internacionali()" id="administrador"> INTERNACIONAL</a>
+    <a class="btnAdmin" onclick="preguntasi()" id="administrador"> FAQ </a>
+    <a class="btnAdmin" onclick="inicioi()" id="administrador"> INICIAL </a>
+    <a class="btnAdmin" href="{{ url_for('administrador') }}" id="administrador"> INDEX </a>
+    <a class="btnAdmin" href="{{ url_for('inicio') }}" id="administrador"> INICIO </a>
+    <a class="navbar-logo" href="{{ url_for('index') }}">
+        <img src="static/img/Logo80.png">
+    </a>
+        <p class="navbar-logoT"> <b>ART</b>EMIS </p> 
+     </nav>
 </head>
 <body>
- <div id="ModificarTuPagina" >
-   <H1>
-    Modificá tu index
-  </H1>  
-  <form  action="{{url_for('ingresar')}}" methods="POST" > 
+ <div id="modificarTuPagina" >
+    <H1>
+    Modificá tu Index
+    </H1>  
+    <form  action="{{url_for('agregarIndex')}}" method="POST" class="indexAdmin" enctype="multipart/form-data"> 
     
-    <label for="fotos">Fotos:</label>
-    <input type="file" id="fotos" name="fotos" /><br>
-    <label for="informacion">Información:</label>
-    <input type="text" id="informacion" name="informacion" /><br>
+      <label for="informacion">Información:</label>
+      <input required type="text" id="informacion" name="informacion" />
+      <br>
+      <label for="foto1">Adjunta imagen 1</label>
+      <input type="file" id="foto1" name="foto1" accept= "image/png,image/jpeg,image/jpg"/>
+      <br>
+      <label for="foto2">Adjunta imagen 2</label>
+      <input type="file" id="foto2" name="foto2" accept= "image/png,image/jpeg,image/jpg"/>
+      <br>
+      <label for="foto3">Adjunta imagen 3</label>
+      <input type="file" id="foto3" name="foto3" accept= "image/png,image/jpeg,image/jpg"/>
+      <br>
+      <label for="foto4">Adjunta imagen 4</label>
+      <input type="file" id="foto4" name="foto4" accept= "image/png,image/jpeg,image/jpg"/>
+      <br>
     
-    <input type="button"  onclick = "" id="send-index" value="Enviar"/>
+      <input type="submit"   id="send-index" value="Enviar"/>
     </form>  
- </div> 
+ 
+   
+   <h1>Eliminá informacion del index</h1>
+    <form>
+      <p>{{mostrarI}}</p>
+      <select name="SelectEliminarIndexImagen" id="SelectEliminarIndexImagen">
+        {%for a in range(lenghtI)%}
+          <option value="{{mostrarI[a][1]}}">{{mostrarI[a][1]}}
+          </option>
+        {%endfor%}
+      </select>
   
-<div id="ModificarMuseos" hidden>
+      <input type="button" onclick="borrarIndex()" value="Eliminar"/>
+      
+    </form>
+
+</div>
+<div id="modificaInicio" hidden>
+  <h1>
+    Modificá tu inicio
+  </h1>    
+  <form action="/agregarInicio" method="POST" class="inicio" enctype="multipart/form-data">
+    <br>
+    <label for ="imagen1"> Adjunta imagen 1</label>
+    <input type ="file" id="imagen1" name="imagen1" accept= "image/png,image/jpeg,image/jpg"/>
+    <br>
+    
+    <br>
+    <label for ="imagen2"> Adjunta imagen 2</label>
+    <input type ="file" id="imagen2" name="imagen2" accept= "image/png,image/jpeg,image/jpg"/>
+    <br>
+    
+    <br>
+    <label for ="imagen3"> Adjunta imagen 3</label>
+    <input type ="file" id="imagen3" name="imagen3" accept= "image/png,image/jpeg,image/jpg"/>
+    <br> 
+    
+    <br>
+    <label for ="imagen4"> Adjunta imagen 4</label>
+    <input type ="file" id="imagen4" name="imagen4" accept= "image/png,image/jpeg,image/jpg"/>
+    <br>
+    <br>
+    <label for ="thinklink"> Thinklink</label>
+    <input type ="file" id="thinklink" name="thinklink" accept= "image/png,image/jpeg,image/jpg"/>
+    <br>
+    
+    <br>
+    <label for="link">Adjunta Link Imagen</label>
+    <input type="url" id="linkInicio" name="linkInicio"/>
+    <br>
+    <br>
+    <label for ="texto"> Adjunta texto</label>
+    <input type ="text" id="texto" name="texto"/>
+    <br>
+    <input type="submit" id="send-inicio" value="Agregar"/>
+    <br>
+  </form>  
+  <h1>
+    Eliminá tu inicial
+  </h1>
+  <p>{{mostrarX}}</p>
+  <form >
+    <select name="SelectEliminarInicial" id="SelectEliminarInicial">
+      {%for a in range(lenghtX)%}
+      <option value="{{mostrarX[a][0]}}">{{mostrarX[a][0]}}</option>
+      {%endfor%}
+    </select>
+    <input type="button" onclick="borrarInicial()"  id="eliminar-inicial" value=" Eliminar" />
+  </form>
+</div>
+  
+<div id="modificarMuseos"  hidden>
   <H1>
-    Modificá tu Museos
+    Agregá tu Museos
   </H1>
-  <form action="{{url_for('ingresar')}}" methods="POST" >
+  <form action="/agregarMuseo" method="POST" class="museos" enctype="multipart/form-data">
       
     <br>
         <label for="titulo">Titulo:</label>
@@ -69,65 +155,86 @@
     
     <br>
         <label for="logo">Logo:</label>
-        <input type="text" id="logo" name="logo" /><br>
+        <input required type="file" id="logo" name="logo" accept= "image/png, image/jpeg, image/jpg"/><br>
+    <br>
+        <label for="fotoMuseo">Foto Museo:</label>
+        <input type="file" id="fotoMuseo" name="fotoMuseo" accept= "image/png, image/jpeg, image/jpg" /><br>
     
+    <br>
         
-        <input type="submit" onclick="museos()" id="send-museos" value="Enviar"/>
+      <input type="submit" id="send-museos" value="Agregar"/>
+  </form>
+  <h1>Eliminá tu museo</h1>
+  <p>{{mostrarM}}</p>
+  <form>
+     <select name="SelectEliminarMuseos" id="SelectEliminarMuseos">
+       {%for a in range(lenghtM)%}
+       <option value="{{mostrarM[a][0]}}">{{mostrarM[a][0]}}</option>
+       {%endfor%}
+     </select>
+     <input type="button" onclick="borrarMuseos()" value="Eliminar"/>
   </form>
 </div>
   
 <div id="modificarNovedades" hidden>
 
   <h1>
-    Modificá tus novedades
+    Agregá tus Novedades
   </h1>
-  <form action="{{url_for('ingresar')}}" methods="POST" >
-  
-  <label for="foto1">Primera Foto:</label>
-  <input type="file" id="foto1" name="foto1" />
-  <br>
-  
-  <label for="texto1">Primer Texto:</label>
-  <input type="text" id="texto1" name="texto1" />
-  <br>
-  
-  <label for="foto2">Segunda Foto:</label>
-  <input type="file" id="foto2" name="foto2" />
-  <br>
-  
-  <label for="texto2">Segundo Texto:</label>
-  <input type="text" id="texto2" name="texto2" />
-  <br>
-  
-  <label for="foto3">Tercera Foto:</label>
-  <input type="file" id="foto3" name="foto3" /><br>
-  <label for="texto3">Tercer Texto:</label>
-  <input type="text" id="texto3" name="texto3" />
-  <br>
-
-  <label for="foto4">Cuarta Foto:</label>
-  <input type="file" id="foto4" name="foto4" />
-  <br>
-
-  
-  <label for="texto4">Texto cuatro:</label>
-  <input type="text" id="texto4" name="texto4" />
-  <br>
-  
-  <label for="link4">Link hipervínculo:</label>
-  <input type="url" id="link" name="link" />
-  <br>
+  <form action="{{url_for('agregarNovedades')}}" method="POST" class="novedades" enctype="multipart/form-data">
+        <br>
+          <label for="foto1">Foto1:</label>
+          <input required type="file" id="foto1" name="foto1" accept= "image/png, image/jpeg, image/jpg"/>
+        
+        <br>
+          <label for="texto1">Texto1:</label>
+          <input  type="text" id="texto1" name="texto1"/>
     
-  <input type="button" onclick="" id="send-novedades" value="Enviar"/>
+        <br>
+          <label for="foto2">Foto2:</label>
+          <input required type="file" id="foto2" name="foto2" accept= "image/png, image/jpeg, image/jpg"/>
+        
+        <br>
+          <label for="texto2">Texto2:</label>
+          <input  type="text" id="texto2" name="texto2"/>
+        
+        <br>
+          <label for="foto3">Foto3:</label>
+          <input required type="file" id="foto3" name="foto3" accept= "image/png, image/jpeg, image/jpg"/>
+        
+        <br>
+          <label for="texto3">Texto3:</label>
+          <input  type="text" id="texto3" name="texto3"/>
+      
+        <br>
+         <label for="foto4">Foto4:</label>
+        <input required type="file" id="foto4" name="foto4" accept= "image/png, image/jpeg, image/jpg"/>
+        <br>
+          <label for="link">Link hipervínculo:</label>
+          <input type="url" id="link" name="link" />
+        <br>
+        
+        <input type="submit" id= "send-agregar" value="Agregar">
+
   </form>
+  
+  <h1>Eliminá Novedades</h1>
+  <form>
+      <p>{{mostrarN}}</p>
+       <select name="SelectEliminarNovedades" id="SelectEliminarNovedades">
+        {%for a in range(lenghtN)%}
+         <OPTION value="{{mostrarN[a][0]}}">{{mostrarN[a][0]}}</OPTION>
+        {%endfor%}
+      </select>
+    <input type="button" onclick="borrarNovedades()" value="Eliminar"/>
+  </form>   
 </div>
 
-<div id="modificarInternacional" hidden>
+<div id="modificarInternacional" class="internacional" hidden>
   <h1>
-    Modificá tu internacional
+    Agregá tu Internacional
   </h1>
-  <form action="{{url_for('ingresar')}}" methods="POST" >
-  
+  <form action="/agregarInternacional" method="POST" enctype="multipart/form-data" >
   <label for="campo1">Nombre campo uno:</label>
   <input type="text" id="campo1" name="campo1" /><br>
   
@@ -135,7 +242,7 @@
   <input type="text" id="textocampo1" name="textocampo1" /><br>
   
   <label for="foto1">Foto uno:</label>
-  <input type="file" id="fotoCampo1" name="fotoCampo1" /><br>
+  <input required type="file" id="fotoCampo1" name="fotoCampo1" accept= "image/png, image/jpeg, image/jpg"/><br>
   
   <label for="campo2">Nombre campo dos:</label>
   <input type="text" id="campo2" name="campo2" /><br>
@@ -144,66 +251,60 @@
   <input type="text" id="textocampo2" name="textocampo2" /><br>
     
   <label for="foto2">Foto dos:</label>
-  <input type="file" id="fotoCampo2" name="fotoCampo2" /><br>
+  <input required type="file" id="fotoCampo2" name="fotoCampo2" accept= "image/png, image/jpeg, image/jpg"/><br>
 
   <label for="campo3">Nombre campo tres:</label>
   <input type="text" id="campo3" name="campo3" /><br>
 
   
   <label for="textoCampo3">Texto campo tres:</label>
-  <input type="text"  id="textocampo2" name="textocampodos" /><br>
+  <input type="text"  id="textocampo3" name="textocampodos" /><br>
 
   <label for="foto3">Foto tres:</label>
-  <input type="file" id="fotoCampo3" name="fotoCampo3" /><br>
+  <input required type="file" id="fotoCampo3" name="fotoCampo3" accept= "image/png, image/jpeg, image/jpg"/><br>
 
     
-  <input type="submit" onclick="internacional()" id="send-internacional" value="Enviar"/>
+  <input type="submit"  id="send-internacional" value="Agregar"/>
   </form>
-
-</div>
-<div id="modificarPreguntas" hidden>
   <h1>
-    Modificá tu preguntas frecuentas
+    Eliminá tu internacional
+  </h1>
+<form>
+  <p>{{mostrarZ}}</p>
+    <select name="SelectEliminarInternacional" id="SelectEliminarInternacional">
+      {%for a in range(lenghtZ)%}
+        <OPTION value="{{mostrarZ[a][0]}}">{{mostrarZ[a][0]}}</OPTION>
+      {%endfor%}    
+    </select>
+  <input type="button" onclick="borrarInternacional()" value="Eliminar"/>
+</form>
+</div>
+<div id="modificarPreguntas" class="faqadmin" hidden>
+  <h1>
+    Agregá tus Preguntas Frecuentas
   </h1>
   <form action="{{url_for('ingresar')}}" methods="POST" >
   
-  <label for="pregunta1">Pregunta uno:</label>
-  <input type="text" id="pregunta1" name="pregunta1" /><br>
+  <label for="pregunta1">Pregunta :</label>
+  <input type="text" id="pregunta" name="pregunta" /><br>
   
-  <label for="respuesta1">Respuesta uno:</label>
-  <input type="text" id="respuesta1" name="respuesta1" /><br>
-  
-  <label for="pregunta2">Pregunta dos:</label>
-  <input type="text" id="pregunta2" name="pregunta2" /><br>
-  
-  <label for="respuesta2">Respuesta dos:</label>
-  <input type="text" id="respuesta2" name="respuesta2" /><br>
-  
-  <label for="pregunta3">Pregunta tres:</label>
-  <input type="text" id="pregunta3" name="pregunta3" /><br>
-    
-  <label for="respuesta3">Respuesta tres:</label>
-  <input type="text" id="respuesta3" name="respuesta3" /><br>
-
-  <label for="pregunta4">Pregunta cuatro:</label>
-  <input type="text" id="pregunta4" name="pregunta4" /><br>
-
-  
-  <label for="respuesta4">Respuesta cuatro:</label>
-  <input type="text"  id="respuesta4" name="respuesta4" /><br>
-
-  <label for="pregunta5">Pregunta cinco:</label>
-  <input type="text" id="pregunta5" name="pregunta5" /><br>
-    
-  <label for="respuesta5">Respuesta cinco:</label>
-  <input type="text" id="respuesta5" name="respuesta5" /><br>
-
-
-    
-  <input type="button" onclick="preguntas()" id="send-faq" value="Enviar"/>
+  <label for="respuesta1">Respuesta :</label>
+  <input type="text" id="respuesta" name="respuesta" /><br>  
+  <input type="button" onclick="preguntas()" id="send-faq" value="Agregar"/>
   </form>
-</div>
-</body>
+  <h1>Eliminá tu pregunta y respuesta</h1>
+  <p>{{mostrar}}</p>
+  <form>
+    <select name="SelectEliminar" id="SelectEliminar">
+      {%for a in range(lenght)%}
+        <option value="{{mostrar[a][0]}}">{{mostrar[a][0]}}</option>
+      {%endfor%}
+    </select>
+    <input type="button" onclick="borrarPreguntas()" value="Eliminar"/>
+  </form>
+
+
  <script src="../static/java/javascript.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
   </script>  
+</body>
