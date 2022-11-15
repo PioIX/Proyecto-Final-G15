@@ -6,22 +6,34 @@
 {% block titulo %} {% endblock %}
   
 {% block contenido %}
-
-<div class="bloqueTitulo">
-</div>
-
-<div class="divGrande">
-  <div class="bloqueDescripcion1"></div>
-  <div class="bloqueDescripcion2"></div>
-  <div class="bloqueFoto"></div>
-  <div class="horariosMuseos"></div>
-  <div class="botonMuseos">
-    <a class="btn" href="{{ url_for('museos') }}" > RESERVAS </a>
+<div class="museos2Grande">
+  <div class="bloqueTitulo">
+    <p>{{respuestaMuseos2[0]}}</p>
   </div>
-
+  <div class="divGrande">
+  <div class="bloqueDescripcion1"> <p>{{respuestaMuseos2[1]}}</p></div>
+  <div class="bloqueDescripcion2">
+    <p style="font-weight:bold; text-align:center">COLECCION ACTUAL</p>
+    <p>{{respuestaMuseos2[2]}}</p>
+  </div>
+  <div class="bloqueFoto">
+    <div class="foto">
+      <img src="/static/media/{{respuestaMuseos2[9]}}" alt="" class="fotoMuseos2"></img>
+    </div>
+  </div>
+  <div class="horariosMuseos">
+    <p style="font-weight:bold;">HORARIOS</p>
+    <p>{{respuestaMuseos2[3]}}</p>
+    <p>{{respuestaMuseos2[4]}}</p>
+    <p>{{respuestaMuseos2[5]}}</p>
+    <p>{{respuestaMuseos2[6]}}</p>
+  </div>
+  </div>
+  <a class="btn" href="{{ url_for('museos') }}" >
+    <div class="botonMuseos2">
+      <a style="text-decoration:none; color: black;" href="{{respuestaMuseos2[7]}}"
+        target="_blank"> Reservas </a>
+    </div>
+  </a>
 </div>
-
-
-
-
 {% endblock %}
