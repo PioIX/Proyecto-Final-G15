@@ -5,29 +5,34 @@
   <title> INICIAR SESION </title>
   <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='estilos.css') }}">
   <style>
-     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
   </style>
-    <nav class= ingresarNav>
-      <a href="{{ url_for('inicio') }}" id="museoNav"> INICIO </a>
-      <a href="{{ url_for('index') }}"> VOLVER </a>
+    <nav class=ingresarNav>
+      <a class="btn" href="{{ url_for('inicio') }}"> INICIO </a>
+      <a class="btn" href="{{ url_for('index') }}"> VOLVER </a>
       <a class="navbar-logo" href="{{ url_for('index') }}">
       <img src="static/img/Logo80.png">
     </a>
     <p class="navbar-logoT"> <b>ART</b>EMIS </p> </p> 
     </nav>
+  <script src="../static/java/javascript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+      </script>  
 </head>
-  <body> 
-    <form action="{{url_for('ingresar')}}" method="POST">
+  <body>
+    <form id="form1" action="{{url_for('ingresar')}}" method="POST" class="ingresarCss">
+    <br>
+      <h2 class="iniciarsesion">INGRESAR</h2>
       <br>
+      <label for="name"> USUARIO </label>
       <br>
+      <input type="text" id="name" name="nombre" size="45" maxlength="45" style="HEIGHT: 20px" required /> <br>
       <br>
-      <label for="name">Usuario: </label>
-      <input type="text" id="name" name="nombre" required /> <br>
+      <label for="password">CONTRESEÑA </label> 
       <br>
-      <label for="password">Contraseña: </label> 
-      <input type="password" id="password" name="password" required /> <br>
+      <input type="password" id="password" name="password" size="45" maxlength="45" style="HEIGHT: 20px"  required /> <br>
       <br>
-      <input type="button" onclick="signUp()" id="send-login" value="Ingresar"/>
+      <input type="button" onclick="signUp()" id="send-login" value="INGRESAR" class="btnIngresarCss"/>
     </form>
   </body>
   
@@ -52,7 +57,5 @@
   </footer>
 
 {% endblock %}
- <script src="../static/java/javascript.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-      </script>  
+ 
 </html>

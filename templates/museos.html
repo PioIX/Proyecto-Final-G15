@@ -2,3 +2,80 @@
 {% block title %}
 <title> Museos </title>
 {% endblock %}
+
+{% block titulo %} 
+{% endblock %}
+
+{% block contenido %}
+<head>
+  <script>
+    function filtros() {
+      var filtro = [];
+      var f1 = document.getElementById('opcionesF1');
+      var f2 = document.getElementById('opcionesF2');
+      var f3 = document.getElementById('opcionesF3');
+      if (f1.selectedIndex != 0) filtro.push(f1.options[f1.selectedIndex].value);
+      if (f2.selectedIndex != 0) filtro.push(f2.options[f2.selectedIndex].value);
+      if (f3.selectedIndex != 0) filtro.push(f3.options[f3.selectedIndex].value);
+      if (filtro.length == 0) {
+        alert('SIN FILTROS');
+        return;
+      }
+      var consulta = "select mi_consulta_aqui where condiciones_aqui";
+      for (var i=0; i<filtro.length; i++) {
+        consulta += " AND mi_campo=" + filtro[i];
+      }
+      alert(consulta);
+    }
+  </script>
+</head>
+
+<br>
+<div class="opciones"> 
+<label for="opcionesMuseos">BARRIO</label>
+  <select name="opciones" class="form-select" id="opcionesF1">
+    <option value="Caballito">Caballito</option>
+    <option value="Almagro">Almagro</option>
+    <option value="Flores">Flores</option>
+    <option value="Belgrano">Belgrano</option>
+    <option value="Palermo">Palermo</option>
+  </select>
+</div>
+
+<div class="opciones"> 
+<label for="opcionesCosto">COSTO</label>
+  <select name="opciones"class="form-select" id="opcionesF2">
+    <option value="100">$100</option>
+    <option value="200">$200</option>
+    <option value="300">$300</option>
+    <option value="400">$400</option>
+    <option value="500">$500</option>
+  </select>
+</div>
+
+<div class="opciones"> 
+<label for="opcionesDiasHabiles">DÍAS HÁBILES</label>
+  <select name="opciones" class="form-select" id="opcionesF3">
+    <option value="Lunes">Lunes</option>
+    <option value="Martes">Martes</option>
+    <option value="Miercoles">Miercoles</option>
+    <option value="Jueves">Jueves</option>
+    <option value="Viernes">Viernes</option>
+  </select>
+</div>
+
+
+<div class="museos123">
+  {%for a in range(LENGHTM)%}
+  <div class="btnMuseos" onclick="document.getElementById('formMuseo{{a}}').submit()"> 
+    <form id="formMuseo{{a}}" class="museosTexto" action="{{url_for('museos2', nombre = respuestaMuseos[a][0])}}" method="POST">
+        <p>{{respuestaMuseos[a][0]}}</p>
+        <img  class="imagenMuseos" src="/static/media/{{respuestaMuseos[a][8]}}"></img>  
+        <input hidden value="{{respuestaMuseos[a][0]}}" name="museo">
+    </form>
+  </div>
+  {%endfor%}
+</div>
+
+
+{% endblock %}
