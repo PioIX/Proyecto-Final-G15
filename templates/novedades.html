@@ -10,27 +10,27 @@
 {% endblock %}
 
 {% block contenido %} 
-<div>
-  
-  <!--<div class="cssNovedad">
-  <h1> LO      ÚLTIMO      EN      EL      MUNDO      DEL      ARTE </h1>
-  </div>-->
-  
-  <div class="cssNovedad1">
-    <img class= "imagenNovedades" src="/static/media/{{respuestaNovedades[-1][0]}}">
-    
-  </div>
-  
-  <div class="cssNovedad2">    
-    <img class= "imagenNovedades2" src="/static/media/{{respuestaNovedades[-1][2]}}">
-    <p>{{respuestaNovedades[-1][3]}}</p>
-  </div>
-  
-  <div class="cssNovedad3">
+<div class="cssdiv1">
+<div class="cssNovedad3">
     <img class= "imagenNovedades3" src="/static/media/{{respuestaNovedades[-1][4]}}">
     <p>{{respuestaNovedades[-1][5]}}</p>
   </div>
   
+<div class="cssdiv2">
+  
+   <div class="cssdiv3"> 
+    <div class="cssNovedad1">
+      <img class= "imagenNovedades" src="/static/media/{{respuestaNovedades[-1][0]}}">
+      
+    </div>
+    
+    <div class="cssNovedad2">    
+      <img class= "imagenNovedades2" src="/static/media/{{respuestaNovedades[-1][2]}}">
+      <p>{{respuestaNovedades[-1][3]}}</p>
+    </div>
+    
+ </div> 
+ <div class="cssdiv4"> 
   <div class="cssNovedad4">
     
     
@@ -41,8 +41,10 @@
       <a href="{{respuestaNovedades[-1][7]}}"><img class="imagenNovedades4" src="/static/media/{{respuestaNovedades[-1][6]}}"></a>
     </div>
   </a>
+
+ </div>
 </div>
 
-
+</div>
 
 {% endblock %}
