@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}
-  <title> Descripción </title>
+<title> Descripción </title>
 {% endblock %}
 
-{% block titulo %} {% endblock %}
+{% block titulo %} 
+{% endblock %}
   
 {% block contenido %}
 <div class="museos2Grande">
@@ -29,11 +30,11 @@
     <p>{{respuestaMuseos2[6]}}</p>
   </div>
   </div>
-  <a class="btn" href="{{ url_for('museos') }}" >
-    <div class="botonMuseos2">
-      <a style="text-decoration:none; color: black;" href="{{respuestaMuseos2[7]}}"
-        target="_blank"> Reservas </a>
+  <a class="btn" href="{{respuestaMuseos2[7]}}" >
+    <div class="botonMuseos2" >
+      <a style="text-decoration:none; color: black;" href="{{respuestaMuseos2[7]}}" target="_blank"> Reservas </a>
     </div>
   </a>
 </div>
+
 {% endblock %}
