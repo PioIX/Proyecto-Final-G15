@@ -131,7 +131,7 @@ def borrarIndexImagen():
   SelectEliminarIndexImagen = request.form["value"]
   conn = sqlite3.connect("artemis.db")
   resu = (
-    f"""DELETE FROM CualquierCosa WHERE fotos= '{SelectEliminarIndexImagen}'"""
+    f"""DELETE FROM CualquierCosa1 WHERE foto1= '{SelectEliminarIndexImagen}'"""
   )
   print(resu)
   conn.execute(resu)
