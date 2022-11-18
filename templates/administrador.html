@@ -16,7 +16,7 @@
     <a class="btnAdmin" href="{{ url_for('administrador') }}" id="administrador"> INDEX </a>
     <a class="btnAdmin" href="{{ url_for('inicio') }}" id="administrador"> INICIO </a>
     <a class="navbar-logo" href="{{ url_for('index') }}">
-        <img src="static/img/Logo80.png">
+        <img src="{{url_for('static', filename='img/Logo80.png') }}">
     </a>
         <p class="navbar-logoT"> <b>ART</b>EMIS </p> 
      </nav>
@@ -65,44 +65,45 @@
 </div>
 <div id="modificaInicio" hidden>
   <h1>
-    Modificá tu inicio
-  </h1>    
-  <form action="/agregarInicio" method="POST" class="inicio" enctype="multipart/form-data">
-    <br>
-    <label for ="imagen1"> Adjunta imagen 1</label>
-    <input type ="file" id="imagen1" name="imagen1" accept= "image/png,image/jpeg,image/jpg"/>
-    <br>
+      Modificá tu inicio
+    </h1>
+  <div class= "maquetaImgInicial">
+    <form action="/agregarInicio" method="POST" class="novedades" enctype="multipart/form-data">
     
-    <br>
-    <label for ="imagen2"> Adjunta imagen 2</label>
-    <input type ="file" id="imagen2" name="imagen2" accept= "image/png,image/jpeg,image/jpg"/>
-    <br>
-    
-    <br>
-    <label for ="imagen3"> Adjunta imagen 3</label>
-    <input type ="file" id="imagen3" name="imagen3" accept= "image/png,image/jpeg,image/jpg"/>
-    <br> 
-    
-    <br>
-    <label for ="imagen4"> Adjunta imagen 4</label>
-    <input type ="file" id="imagen4" name="imagen4" accept= "image/png,image/jpeg,image/jpg"/>
-    <br>
-    <br>
-    <label for ="thinklink"> Thinklink</label>
-    <input type ="file" id="thinklink" name="thinklink" accept= "image/png,image/jpeg,image/jpg"/>
-    <br>
-    
-    <br>
-    <label for="link">Adjunta Link Imagen</label>
-    <input type="url" id="linkInicio" name="linkInicio"/>
-    <br>
-    <br>
-    <label for ="texto"> Adjunta texto</label>
-    <input type ="text" id="texto" name="texto"/>
-    <br>
-    <input type="submit" id="send-inicio" value="Agregar"/>
-    <br>
-  </form>  
+      <li>
+      <label for ="imagen1"> Adjunta imagen 1 </label>
+      <input type ="file" id="imagen1" name="imagen1" accept= "image/png,image/jpeg,image/jpg"/>
+      </li>
+      <li>
+      <label for ="imagen2"> Adjunta imagen 2 </label>
+      <input type ="file" id="imagen2" name="imagen2" accept= "image/png,image/jpeg,image/jpg"/>
+      </li>
+      <li>
+      <label for ="imagen3"> Adjunta imagen 3 </label>
+      <input type ="file" id="imagen3" name="imagen3" accept= "image/png,image/jpeg,image/jpg"/>
+      </li>
+      <li>
+      <label for ="imagen4"> Adjunta imagen 4 </label>
+      <input type ="file" id="imagen4" name="imagen4" accept= "image/png,image/jpeg,image/jpg"/>
+      </li>
+      <li>
+      <label for ="thinklink"> Thinklink </label>
+      <input type ="file" id="thinklink" name="thinklink" accept= "image/png,image/jpeg,image/jpg"/>
+      </li>
+      <li>
+      <label for="link">Adjunta link </label>
+      <input type="url" id="linkInicio" name="linkInicio"/>
+      </li>
+      <li>
+      <label for ="texto"> Adjunta texto </label>
+      <input type ="text" id="texto" name="texto"/>
+      </li>
+      <li>
+      <input type="submit" id="send-inicio" value="Agregar"/>
+      </li>
+    </form>  
+    <img class= "maquetaInicioImg" src= "static/img/maquetaInicio.png"/>
+  </div>
   <h1>
     Eliminá tu inicial
   </h1>
@@ -165,7 +166,7 @@
       <input type="submit" id="send-museos" value="Agregar"/>
   </form>
   <h1>Eliminá tu museo</h1>
-  <p>{{mostrarM}}</p>
+  <!--<p>{{mostrarM}}</p>-->
   <form>
      <select name="SelectEliminarMuseos" id="SelectEliminarMuseos">
        {%for a in range(lenghtM)%}
@@ -177,46 +178,62 @@
 </div>
   
 <div id="modificarNovedades" hidden>
-
   <h1>
-    Agregá tus Novedades
-  </h1>
-  <form action="{{url_for('agregarNovedades')}}" method="POST" class="novedades" enctype="multipart/form-data">
-        <br>
-          <label for="foto1">Foto1:</label>
-          <input required type="file" id="foto1" name="foto1" accept= "image/png, image/jpeg, image/jpg"/>
-        
-        <br>
-          <label for="texto1">Texto1:</label>
-          <input  type="text" id="texto1" name="texto1"/>
+      Agregá tus Novedades
+    </h1>
+  <div class="maquetaImgNov">
     
-        <br>
-          <label for="foto2">Foto2:</label>
-          <input required type="file" id="foto2" name="foto2" accept= "image/png, image/jpeg, image/jpg"/>
-        
-        <br>
-          <label for="texto2">Texto2:</label>
-          <input  type="text" id="texto2" name="texto2"/>
-        
-        <br>
-          <label for="foto3">Foto3:</label>
-          <input required type="file" id="foto3" name="foto3" accept= "image/png, image/jpeg, image/jpg"/>
-        
-        <br>
-          <label for="texto3">Texto3:</label>
-          <input  type="text" id="texto3" name="texto3"/>
+    <form action="{{url_for('agregarNovedades')}}" method="POST" class="novedades" enctype="multipart/form-data">
+          <li>
+            <label for="foto1">Adjunta imagen 1</label>
+            <input required type="file" id="foto1" name="foto1" accept= "image/png, image/jpeg, image/jpg" class="inputNovedades"/>
+          </li>
+          <li>
+            <label for="texto1">Adjuntar texto 1</label>
+            <input  type="text" id="texto1" name="texto1" class="inputNovedades"/>
       
-        <br>
-         <label for="foto4">Foto4:</label>
-        <input required type="file" id="foto4" name="foto4" accept= "image/png, image/jpeg, image/jpg"/>
-        <br>
-          <label for="link">Link hipervínculo:</label>
-          <input type="url" id="link" name="link" />
-        <br>
+          </li>
+          <li>
+          
+            <label for="foto2">Adjunta imagen 2</label>
+            <input required type="file" id="foto2" name="foto2" accept= "image/png, image/jpeg, image/jpg" class="inputNovedades"/>
+          
+          </li>
+          <li>
+          
+            <label for="texto2">Adjunta texto 2</label>
+            <input  type="text" id="texto2" name="texto2" class="inputNovedades"/>
+          
+          </li>
+          <li>
+          
+            <label for="foto3">Adjunta imagen 3</label>
+            <input required type="file" id="foto3" name="foto3" accept= "image/png, image/jpeg, image/jpg" class="inputNovedades"/>
+          
+          </li>
+          <li>
+          
+            <label for="texto3">Adjunta texto 3</label>
+            <input  type="text" id="texto3" name="texto3" class="inputNovedades"/>
         
-        <input type="submit" id= "send-agregar" value="Agregar">
-
-  </form>
+          </li>
+          <li>
+          
+           <label for="foto4">Adjunta imagen 4</label>
+          <input required type="file" id="foto4" name="foto4" accept= "image/png, image/jpeg, image/jpg" class="inputNovedades"/>
+         </li>
+          <li>
+          
+            <label for="link">Link hipervínculo</label>
+            <input type="url" id="link" name="link" class="inputNovedades" />
+          </li>
+          <li>
+          
+          <input type="submit" id= "send-agregar" value="Agregar" >
+            </li>
+    </form>
+    <img class= "maquetaNovedadesImg" src= "static/img/maquetaNovedades.png"/>
+  </div>
   
   <h1>Eliminá Novedades</h1>
   <form>
@@ -227,45 +244,48 @@
         {%endfor%}
       </select>
     <input type="button" onclick="borrarNovedades()" value="Eliminar"/>
-  </form>   
+  </form> 
 </div>
 
 <div id="modificarInternacional" class="internacional" hidden>
   <h1>
     Agregá tu Internacional
   </h1>
-  <form action="/agregarInternacional" method="POST" enctype="multipart/form-data" >
-  <label for="campo1">Nombre campo uno:</label>
-  <input type="text" id="campo1" name="campo1" /><br>
-  
-  <label for="textoCampo1">Texto campo uno:</label>
-  <input type="text" id="textocampo1" name="textocampo1" /><br>
-  
-  <label for="foto1">Foto uno:</label>
-  <input required type="file" id="fotoCampo1" name="fotoCampo1" accept= "image/png, image/jpeg, image/jpg"/><br>
-  
-  <label for="campo2">Nombre campo dos:</label>
-  <input type="text" id="campo2" name="campo2" /><br>
-  
-  <label for="textoCampo2">Texto campo dos:</label>
-  <input type="text" id="textocampo2" name="textocampo2" /><br>
+  <div class= "maquetaImgInternacional">
+    <form action="/agregarInternacional" method="POST" class= "novedades" enctype="multipart/form-data" >
+    <label for="campo1">Nombre campo 1</label>
+    <input type="text" id="campo1" name="campo1" /><br>
     
-  <label for="foto2">Foto dos:</label>
-  <input required type="file" id="fotoCampo2" name="fotoCampo2" accept= "image/png, image/jpeg, image/jpg"/><br>
-
-  <label for="campo3">Nombre campo tres:</label>
-  <input type="text" id="campo3" name="campo3" /><br>
-
-  
-  <label for="textoCampo3">Texto campo tres:</label>
-  <input type="text"  id="textocampo3" name="textocampodos" /><br>
-
-  <label for="foto3">Foto tres:</label>
-  <input required type="file" id="fotoCampo3" name="fotoCampo3" accept= "image/png, image/jpeg, image/jpg"/><br>
-
+    <label for="textoCampo1">Texto campo 1</label>
+    <input type="text" id="textocampo1" name="textocampo1" /><br>
     
-  <input type="submit"  id="send-internacional" value="Agregar"/>
-  </form>
+    <label for="foto1">Foto 1</label>
+    <input required type="file" id="fotoCampo1" name="fotoCampo1" accept= "image/png, image/jpeg, image/jpg"/><br>
+    
+    <label for="campo2">Nombre campo 2</label>
+    <input type="text" id="campo2" name="campo2" /><br>
+    
+    <label for="textoCampo2">Texto campo 2</label>
+    <input type="text" id="textocampo2" name="textocampo2" /><br>
+      
+    <label for="foto2">Foto 2</label>
+    <input required type="file" id="fotoCampo2" name="fotoCampo2" accept= "image/png, image/jpeg, image/jpg"/><br>
+  
+    <label for="campo3">Nombre campo 3</label>
+    <input type="text" id="campo3" name="campo3" /><br>
+  
+    
+    <label for="textoCampo3">Texto campo 3</label>
+    <input type="text"  id="textocampo3" name="textocampodos" /><br>
+  
+    <label for="foto3">Foto 3</label>
+    <input required type="file" id="fotoCampo3" name="fotoCampo3" accept= "image/png, image/jpeg, image/jpg"/><br>
+  
+      
+    <input type="submit"  id="send-internacional" value="Agregar"/>
+    </form>
+    <img class= "maquetaInternacionalImg" src= "static/img/maquetaInternacional.png"/>
+  </div>
   <h1>
     Eliminá tu internacional
   </h1>
@@ -285,10 +305,10 @@
   </h1>
   <form action="{{url_for('ingresar')}}" methods="POST" >
   
-  <label for="pregunta1">Pregunta :</label>
+  <label for="pregunta1">Adjunta pregunta </label>
   <input type="text" id="pregunta" name="pregunta" /><br>
   
-  <label for="respuesta1">Respuesta :</label>
+  <label for="respuesta1">Adjunta respusta</label>
   <input type="text" id="respuesta" name="respuesta" /><br>  
   <input type="button" onclick="preguntas()" id="send-faq" value="Agregar"/>
   </form>
